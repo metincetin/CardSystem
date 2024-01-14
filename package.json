@@ -1,0 +1,10 @@
+{
+	"name": "org.metin.cardsystem",
+	"version": "0.1.0",
+	"description": "Card system",
+	"displayName": "CardSystem",
+	"author": {
+		"name": "Metin Çetin",
+		"email": "metinc309@gmail.com"
+	}
+}
