@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -66,7 +65,7 @@ namespace CardSystem.UI
 
 		public void OnEndDrag(PointerEventData eventData)
 		{
-			transform.DOLocalMove(Vector3.zero, .2f).SetEase(Ease.OutExpo);
+			transform.localPosition = Vector3.zero;
 			DragEnded?.Invoke(this, eventData);
 			_isDragging = false;
 		}

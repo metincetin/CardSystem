@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -137,15 +136,13 @@ namespace CardSystem.UI
 			_dragging = view;
 		}
 
-		private void OnCardPointerExited(CardView view, PointerEventData eventData)
+		protected virtual void OnCardPointerExited(CardView view, PointerEventData eventData)
 		{
-			view.transform.DOKill();
-			view.transform.DOLocalMove(Vector3.zero, .2f);
+			
 		}
 
-		private void OnCardPointerEntered(CardView view, PointerEventData eventData)
+		protected virtual void OnCardPointerEntered(CardView view, PointerEventData eventData)
 		{
-			view.transform.DOLocalMove(new Vector3(0, 300, 0), .2f);
 		}
 
 		private void UpdateLayout()

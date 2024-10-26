@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +11,6 @@ namespace CardSystem.UI
         private void Start()
         {
 			_cardView = GetComponentInChildren<CardView>();
-            (transform.GetChild(0) as RectTransform).DOLocalMoveY(0, .4f).From(100);
 
             _cardView.PointerEntered += (CardView _, PointerEventData _) => { _hovered = true; };
             _cardView.PointerExited += (CardView _, PointerEventData _) => { _hovered = false; };
